@@ -1,11 +1,7 @@
 #!/bin/sh
 #
 # Sends a message to your discord webhook
-# Requires a string parameter to be passed in ($1)
 #
 
-# Supply your personal discord bot webhook
-discordwebhookurl="YOUR_DISCORD_WEBHOOK_HERE"
-
-curl -H "Content-Type: application/json" -X POST -d '{"content":"'"${1}"'"}' $discordwebhookurl
+curl -H "Content-Type: application/json" -X POST -d '{"content":"'"${1}"'"}' "$DISCORD_HOOK"
 exit 0

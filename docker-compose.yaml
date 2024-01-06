@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  apcupsd:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: apcupsd
+    ports:
+      - "3493:3493"
