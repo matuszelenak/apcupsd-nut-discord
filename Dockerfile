@@ -10,5 +10,6 @@ COPY nut-wrapper.sh /etc/apcupsd/nut-wrapper.sh
 RUN chmod -R 744 /etc/apcupsd/tmpscripts/
 RUN mv -v /etc/apcupsd/tmpscripts/* /etc/apcupsd
 RUN rm -rf /etc/apcupsd/tmpscripts
+RUN chmod 755 /etc/apcupsd/nut-wrapper.sh
 
 CMD [ "bash", "entrypoint.sh" ]

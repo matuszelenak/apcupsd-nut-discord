@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+echo "please"
 # Script: 	upsnutwrapper.sh
 # Author:	Martin (Machtl) Lang
 # E-Mail:	martin@martinlang.at
@@ -53,7 +54,7 @@ APCUPSDSERVER="localhost"		#apcupsd is running on the same machine
 #APCUPSDSERVER="127.0.0.1"		#apcupsd is running on the same machine
 #APCUPSDSERVER="remoteip:3551"		#apcupsd is running on a remote machine with ip "remoteip" on the port "3551"
 
-LOGGING=false				#set to 'true' to see incoming commands
+LOGGING=true				#set to 'true' to see incoming commands
 LOG_FILE=/tmp/upsnutwrapper.log		#the location where logs are written to
 
 
@@ -263,7 +264,7 @@ esac
 
 log() {
 if [ "$LOGGING" = true ] ; then
-	echo -e "$(date)\tREM_IP=${TCPREMOTEIP} \tPID=$$ \t${1}" >> "$LOG_FILE"
+	echo -e "$(date)\tREM_IP=${TCPREMOTEIP} \tPID=$$ \t${1}"
 fi
 }
 
