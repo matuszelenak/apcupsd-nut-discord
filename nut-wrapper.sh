@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-echo "please"
 # Script: 	upsnutwrapper.sh
 # Author:	Martin (Machtl) Lang
 # E-Mail:	martin@martinlang.at
@@ -264,7 +263,7 @@ esac
 
 log() {
 if [ "$LOGGING" = true ] ; then
-	echo -e "$(date)\tREM_IP=${TCPREMOTEIP} \tPID=$$ \t${1}"
+	echo -e "$(date)\tREM_IP=${TCPREMOTEIP} \tPID=$$ \t${1}" >> "$LOG_FILE"
 fi
 }
 
