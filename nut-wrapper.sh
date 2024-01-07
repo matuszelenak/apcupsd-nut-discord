@@ -52,8 +52,7 @@
 APCUPSDSERVER="localhost"		#apcupsd is running on the same machine
 #APCUPSDSERVER="127.0.0.1"		#apcupsd is running on the same machine
 #APCUPSDSERVER="remoteip:3551"		#apcupsd is running on a remote machine with ip "remoteip" on the port "3551"
-
-LOGGING=true				#set to 'true' to see incoming commands
+				#set to 'true' to see incoming commands
 LOG_FILE=/tmp/upsnutwrapper.log		#the location where logs are written to
 
 
